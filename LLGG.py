@@ -21,7 +21,7 @@ rpc.connect()
 async def started(connection):
     print("Connected")
     print('henlo')
-    print(rpc.update(state='Legaue of Legends', large_image='chromiumclient'))
+    print(rpc.update(state='League of Legends', large_image='chromiumclient'))
     
 @connector.close
 async def league_closed(connection):
@@ -92,7 +92,7 @@ async def gstart(connection, event):
         names['startg'] = time.time()
         print(rpc.update(details = 'LoL - {}({})'.format(names['modename'], names['detailsname']), state = "In progress", start = time.time(), large_image=names['champname'], large_text=names['champlocale'], small_image=names['modeicon'], small_text=names['modeicon']))
     elif event.data['phase'] == 'None':
-        print(rpc.update(state='Legaue of Legends', large_image='chromiumclient'))
+        print(rpc.update(state='League of Legends', large_image='chromiumclient'))
     elif event.data['phase'] == 'EndOfGame':
         print(rpc.update(details = 'LoL - {}({})'.format(names['modename'], names['detailsname']), state = "EOG - ", start=names['startg'], end=time.time(), large_image=names['champname'], large_text=names['champlocale'], small_image=names['modeicon'], small_text=names['modeicon']))
         
